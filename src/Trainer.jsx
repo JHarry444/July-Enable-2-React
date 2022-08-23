@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 
 const Trainer = (props) => {
-    console.log("PROPS: ", props);
+    // console.log("PROPS: ", props);
     const { name, age, specialism} = props;
 
     return (
