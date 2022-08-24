@@ -13,10 +13,10 @@ function Converter() {
 
   return (
     <>
-      <label htmlFor="mileInput">Miles:</label>
+      {/* <label htmlFor="mileInput">Miles:</label> */}
       <input type="number" id="mileInput" value={miles} onChange={convertToKms} />
       <br />
-      <label htmlFor="kmInput">Kilometers</label>
+      {/* <label htmlFor="kmInput">Kilometers</label> */}
       <input
         type="number"
         id="kmInput"
