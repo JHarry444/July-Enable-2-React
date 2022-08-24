@@ -1,8 +1,7 @@
 import './App.css';
 import Footer from './components/Footer';
-import Trainer from './components/Trainer';
 import Converter from './components/Converter';
-import trainers from './components/data/trainers.json';
+import FilteredList from './components/FilteredList';
 
 function App() {
   return (
@@ -13,9 +12,7 @@ function App() {
         </section>
         <section>
           <h2>Trainers</h2>
-          {
-          trainers.map(({ name, age, specialism }) => <Trainer key={`${name}-${specialism}`} name={name} age={age} specialism={specialism} />)
-          }
+          <FilteredList />
         </section>
       </main>
 
