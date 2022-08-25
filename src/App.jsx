@@ -16,6 +16,7 @@ function App() {
           {!hide && <Hooks />}
         </section>
         <section>
+          <h2>Cakes</h2>
           <DataRequests />
         </section>
         <section>
