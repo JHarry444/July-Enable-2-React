@@ -1,34 +1,42 @@
 import './App.css';
-import { useState } from 'react';
+import {
+  BrowserRouter, Link, Route, Routes,
+} from 'react-router-dom';
 import Footer from './components/Footer';
 // import Converter from './components/Converter';
 // import FilteredList from './components/FilteredList';
 import Hooks from './components/Hooks';
 import DataRequests from './components/DataRequests';
+import Home from './components/Home';
+import Params from './components/Params';
 
 function App() {
-  const [hide, setHide] = useState(false);
   return (
     <div className="App">
-      <main>
-        <section>
-          <button type="button" onClick={() => setHide((h) => !h)}>Toggle</button>
-          {!hide && <Hooks />}
-        </section>
-        <section>
-          <h2>Cakes</h2>
-          <DataRequests />
-        </section>
-        <section>
-          {/* <Converter /> */}
-        </section>
-        <section>
-          <h2>Trainers</h2>
-          {/* <FilteredList /> */}
-        </section>
-      </main>
+      <BrowserRouter>
+        <nav>
+          <Link to="/">Home</Link>
+          <Link to="/data">Data</Link>
+        </nav>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/hooks" element={<Hooks />} />
+          <Route path="/data" element={<DataRequests />} />
+          <Route path="/params/:param" element={<Params />} />
+        </Routes>
 
-      <Footer />
+        <main>
+          <section>
+            {/* <Converter /> */}
+          </section>
+          <section>
+            <h2>Trainers</h2>
+            {/* <FilteredList /> */}
+          </section>
+        </main>
+
+        <Footer />
+      </BrowserRouter>
     </div>
   );
 }
