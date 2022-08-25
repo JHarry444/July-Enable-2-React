@@ -4,6 +4,7 @@ import Footer from './components/Footer';
 // import Converter from './components/Converter';
 // import FilteredList from './components/FilteredList';
 import Hooks from './components/Hooks';
+import DataRequests from './components/DataRequests';
 
 function App() {
   const [hide, setHide] = useState(false);
@@ -13,6 +14,9 @@ function App() {
         <section>
           <button type="button" onClick={() => setHide((h) => !h)}>Toggle</button>
           {!hide && <Hooks />}
+        </section>
+        <section>
+          <DataRequests />
         </section>
         <section>
           {/* <Converter /> */}

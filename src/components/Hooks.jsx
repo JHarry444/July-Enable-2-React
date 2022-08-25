@@ -10,7 +10,7 @@ function Hooks() {
     setTimeout(() => setVal('time'), 1_000);
 
     return () => console.log('component did unmount');
-  }, []);
+  }, [val]);
 
   return (
     <>

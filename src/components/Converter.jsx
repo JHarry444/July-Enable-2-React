@@ -11,22 +11,29 @@ function Converter() {
     setKms(newValue * 1.6);
   };
 
+  const mileId = 'mileInput';
+  const kmId = 'kmInput';
+
   return (
     <>
-      {/* <label htmlFor="mileInput">Miles:</label> */}
-      <input type="number" id="mileInput" value={miles} onChange={convertToKms} />
+      <label htmlFor={mileId}>
+        Miles:
+        <input type="number" id={mileId} value={miles} onChange={convertToKms} />
+      </label>
       <br />
-      {/* <label htmlFor="kmInput">Kilometers</label> */}
-      <input
-        type="number"
-        id="kmInput"
-        value={kms}
-        onChange={(e) => {
-          const newValue = parseInt(e.target.value, 10);
-          setKms(newValue);
-          setMiles(newValue / 1.6);
-        }}
-      />
+      <label htmlFor={kmId}>
+        Kilometers
+        <input
+          type="number"
+          id={kmId}
+          value={kms}
+          onChange={(e) => {
+            const newValue = parseInt(e.target.value, 10);
+            setKms(newValue);
+            setMiles(newValue / 1.6);
+          }}
+        />
+      </label>
     </>
   );
 }
