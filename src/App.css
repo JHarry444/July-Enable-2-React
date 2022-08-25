@@ -2,8 +2,20 @@
   text-align: center;
 }
 
-a {
-  margin-right: 2%
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 5%;
+}
+
+footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0
+}
+
+footer {
+  border-top: black 1px solid
 }
 
 .App-logo {
@@ -36,6 +48,7 @@ a {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
